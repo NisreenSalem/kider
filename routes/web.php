@@ -68,3 +68,7 @@ Route::get('appointment', function () {
 
 
 Route::post('/contactMail', [ContactController::class, 'sendEmail'])->name('send.email');
+
+Auth::routes(['verify' => true]);
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

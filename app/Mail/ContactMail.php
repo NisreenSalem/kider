@@ -27,8 +27,13 @@ class ContactMail extends Mailable
     }
     public function build()
     {
-        return $this->subject('Contact Form Submission')->view('emails.contact-form');
+        return $this->view('emails.contact-form'); // Adjust the view name and path accordingly
     }
+
+    // public function build()
+    // {
+    //     return $this->subject('Contact Form Submission')->view('emails.contact-form');
+    // }
     /**
      * Get the message envelope.
      */
